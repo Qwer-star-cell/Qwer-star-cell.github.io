@@ -13,7 +13,7 @@
 
 
 
-<title>Test2 | Qwer</title>
+<title>知识篇 | Qwer</title>
 
 
 
@@ -130,76 +130,11 @@ color="220,220,220" opacity='1' zIndex="-2" count="300" src="//cdn.bootcss.com/c
                 <div class="container">
     
     
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
-</div>
-
-<script>
-    var tocbot_timer;
-    var DEPTH_MAX = 6; // 为 6 时展开所有
-    var tocbot_default_config = {
-        tocSelector: '.tocbot-list',
-        contentSelector: '.post-content',
-        headingSelector: 'h1, h2, h3, h4, h5',
-        orderedList: false,
-        scrollSmooth: true,
-        onClick: extend_click,
-    };
-
-    function extend_click() {
-        clearTimeout(tocbot_timer);
-        tocbot_timer = setTimeout(function() {
-            tocbot.refresh(obj_merge(tocbot_default_config, {
-                hasInnerContainers: true
-            }));
-        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
-    }
-
-    document.ready(function() {
-        tocbot.init(obj_merge(tocbot_default_config, {
-            collapseDepth: 1
-        }));
-    });
-
-    function expand_toc() {
-        var b = document.querySelector('.tocbot-toc-expand');
-        var expanded = b.getAttribute('data-expanded');
-        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
-        tocbot.refresh(obj_merge(tocbot_default_config, {
-            collapseDepth: expanded ? 1 : DEPTH_MAX
-        }));
-        b.innerText = expanded ? 'Expand all' : 'Collapse all';
-    }
-
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
-
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-    function obj_merge(target, source) {
-        for (var item in source) {
-            if (source.hasOwnProperty(item)) {
-                target[item] = source[item];
-            }
-        }
-        return target;
-    }
-</script>
-    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Test2</h1>
+            <h1 class="post-title">知识篇</h1>
             
                 <div class="post-meta">
                     
@@ -208,14 +143,14 @@ color="220,220,220" opacity='1' zIndex="-2" count="300" src="//cdn.bootcss.com/c
 
                     
                         <span class="post-time">
-                        Date: <a href="#">一月 30, 2024&nbsp;&nbsp;9:25:39</a>
+                        Date: <a href="#">一月 30, 2024&nbsp;&nbsp;19:16:36</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/">软件安装</a>
+                                <a href="/categories/%E7%9F%A5%E8%AF%86%E7%AF%87/">知识篇</a>
                             
                         </span>
                     
@@ -224,18 +159,7 @@ color="220,220,220" opacity='1' zIndex="-2" count="300" src="//cdn.bootcss.com/c
         </header>
 
         <div class="post-content">
-            <h3 id="1-This-is-a-blog-Test"><a href="#1-This-is-a-blog-Test" class="headerlink" title="1. This is a blog Test"></a>1. This is a blog Test</h3><ul>
-<li>First</li>
-<li>Second</li>
-</ul>
-<hr>
-<h3 id="2-Show-Test"><a href="#2-Show-Test" class="headerlink" title="2. Show Test"></a>2. Show Test</h3><ul>
-<li><strong>加粗</strong><blockquote>
-<p><em>斜体</em></p>
-</blockquote>
-</li>
-</ul>
-
+            
         </div>
 
         
@@ -249,7 +173,7 @@ color="220,220,220" opacity='1' zIndex="-2" count="300" src="//cdn.bootcss.com/c
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="https://qwer-star-cell.github.io/2024/01/30/Test2/">https://qwer-star-cell.github.io/2024/01/30/Test2/</a></span>
+                        <span><a href="https://qwer-star-cell.github.io/2024/01/30/%E7%9F%A5%E8%AF%86%E7%AF%87/">https://qwer-star-cell.github.io/2024/01/30/%E7%9F%A5%E8%AF%86%E7%AF%87/</a></span>
                     </p>
                 
                 
@@ -273,7 +197,7 @@ color="220,220,220" opacity='1' zIndex="-2" count="300" src="//cdn.bootcss.com/c
                 <span class="tag">
                     
                     
-                        <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"># 软件安装</a>
+                        <a href="/tags/%E7%9F%A5%E8%AF%86%E7%AF%87/"># 知识篇</a>
                     
                         
                 </span>
@@ -287,7 +211,7 @@ color="220,220,220" opacity='1' zIndex="-2" count="300" src="//cdn.bootcss.com/c
         <section class="post-nav">
             
             
-            <a class="next" rel="next" href="/2024/01/29/hello-world/">Hello World</a>
+            <a class="next" rel="next" href="/2024/01/30/%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/">基于Hexo+Github博客的搭建</a>
             
         </section>
 
